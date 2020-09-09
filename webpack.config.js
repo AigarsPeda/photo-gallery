@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
+const Dotenv = require("dotenv-webpack");
 
 const port = process.env.PORT || 8080;
 
@@ -119,7 +120,8 @@ module.exports = (env) => {
           postcss: [autoprefixer()]
         }
       }),
-      new CleanWebpackPlugin()
+      new CleanWebpackPlugin(),
+      new Dotenv()
     ],
     devtool: isProduction ? false : "inline-source-map"
   };
