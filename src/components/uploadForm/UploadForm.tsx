@@ -24,7 +24,7 @@ const UploadForm: React.FC = () => {
   };
 
   return (
-    <form className="uploadForm">
+    <form className="upload-form">
       <label>
         <input type="file" onChange={changeHandler} />
         <span>+</span>

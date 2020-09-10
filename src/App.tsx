@@ -4,6 +4,7 @@ import "./global.styles/App.scss";
 // components
 import Title from "./components/Title/Title";
 import UploadForm from "./components/uploadForm/UploadForm";
+import ImageGrid from "./components/imageGrid/ImageGrid";
 
 class App extends React.PureComponent {
   render() {
@@ -11,6 +12,7 @@ class App extends React.PureComponent {
       <div className="App">
         <Title />
         <UploadForm />
+        <ImageGrid />
       </div>
     );
   }

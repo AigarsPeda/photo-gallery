@@ -3,14 +3,18 @@
 @import "./breakpoints.scss";
 
 @import "../components/Title/title.scss";
-@import "../components/progressBar/progressBar.scss";
+@import "../components/imageGrid/imageGrid.scss";
 @import "../components/uploadForm/uploadForm.scss";
+@import "../components/progressBar/progressBar.scss";
+
+
 
 body,
 html {
   user-select: none;
   overscroll-behavior: none;
   margin: 0;
+  color: $text;
   font-family: "Poppins", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
