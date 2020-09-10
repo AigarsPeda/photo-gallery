@@ -24,8 +24,11 @@ const UploadForm: React.FC = () => {
   };
 
   return (
-    <form>
-      <input type="file" onChange={changeHandler} />
+    <form className="uploadForm">
+      <label>
+        <input type="file" onChange={changeHandler} />
+        <span>+</span>
+      </label>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div className="file">{file.name}</div>}
