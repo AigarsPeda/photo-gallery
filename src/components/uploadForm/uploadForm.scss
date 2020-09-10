@@ -1,0 +1,38 @@
+.uploadForm {
+  margin: 30px auto 10px;
+  text-align: center;
+
+  label {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $primary;
+    border-radius: 50%;
+    margin: 10px auto;
+    line-height: 30px;
+    color: $primary;
+    font-weight: bold;
+    font-size: 24px;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+      background: $primary;
+      color: white;
+    }
+
+    input {
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+  }
+
+  .output {
+    height: 60px;
+    font-size: 0.8rem;
+
+    .error {
+      color: $error;
+    }
+  }
+}
