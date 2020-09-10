@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const UploadForm: React.FC = () => {
   const [file, setFile] = useState<File>();
+  const [error, setError] = useState<string>();
 
   const types = ["image/png", "image/jpeg"];
 
@@ -9,17 +10,24 @@ const UploadForm: React.FC = () => {
     if (!e.target.files) {
       return;
     }
-    let selected = e.target.files[0];
+    const selected = e.target.files[0];
 
     if (selected && types.includes(selected.type)) {
       setFile(selected);
+      setError(undefined);
+    } else {
+      setFile(undefined);
+      setError("Please select an image file (png or jpeg)");
     }
   };
 
   return (
     <form>
-      <h1>Ha</h1>
       <input type="file" onChange={changeHandler} />
+      <div className="output">
+        {error && <div className="error">{error}</div>}
+        {file && <div className="file">{file.name}</div>}
+      </div>
     </form>
   );
 };
