@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./global.styles/App.scss";
 
 // components
-import Title from "./components/Title/Title";
+import Title from "./components/title/Title";
 import UploadForm from "./components/uploadForm/UploadForm";
 import ImageGrid from "./components/imageGrid/ImageGrid";
+import Modal from "./components/modal/Modal";
 
-class App extends React.PureComponent {
-  render() {
-    return (
-      <div className="App">
-        <Title />
-        <UploadForm />
-        <ImageGrid />
-      </div>
-    );
-  }
-}
+const App: React.FC = () => {
+  const [selectedImg, setSelectedImg] = useState<string>();
+
+  return (
+    <div className="App">
+      <Title />
+      <UploadForm />
+      <ImageGrid setSelectedImg={setSelectedImg} />
+      {selectedImg && (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      )}
+    </div>
+  );
+};
 
 export default App;
