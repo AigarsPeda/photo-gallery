@@ -12,8 +12,15 @@ const Dotenv = require("dotenv-webpack");
 const port = process.env.PORT || 8080;
 
 module.exports = (env) => {
-  const isProduction = env === "production";
-  console.log(env);
+  const isProduction = env.production === "production";
+
+  if (env.production) {
+    console.log("\033[31mPRODUCTION MODE");
+  }
+  if (env.development) {
+    console.log("\033[32mDEVELOPMENT MODE");
+  }
+
   return {
     entry: "./src/index.tsx",
     output: {
