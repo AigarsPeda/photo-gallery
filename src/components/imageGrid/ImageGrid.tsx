@@ -12,10 +12,11 @@ interface Props {
 
 const ImageGrid: React.FC<Props> = (props) => {
   const { setSelectedImg } = props;
-  const { docs } = useFirestore("images");
+  const { docs }: { docs: ImageCollection[] } = useFirestore("images");
 
   return (
     <div className="image-grid">
+      {console.log(docs)}
       {docs &&
         docs.map((doc: ImageCollection) => {
           return (
