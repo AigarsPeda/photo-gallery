@@ -16,7 +16,6 @@ const ImageGrid: React.FC<Props> = (props) => {
 
   return (
     <div className="image-grid">
-      {console.log(docs)}
       {docs &&
         docs.map((doc: ImageCollection) => {
           return (
