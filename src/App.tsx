@@ -1,23 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./global.styles/App.scss";
 
 // components
-import Title from "./components/title/Title";
-import UploadForm from "./components/uploadForm/UploadForm";
-import ImageGrid from "./components/imageGrid/ImageGrid";
-import Modal from "./components/modal/Modal";
+import UploadPage from "./pages/uploadPage";
 
 const App: React.FC = () => {
-  const [selectedImg, setSelectedImg] = useState<string>();
-
   return (
     <div className="App">
-      <Title />
-      <UploadForm />
-      <ImageGrid setSelectedImg={setSelectedImg} />
-      {selectedImg && (
-        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
-      )}
+      <UploadPage />
     </div>
   );
 };
