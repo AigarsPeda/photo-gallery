@@ -1,5 +1,7 @@
 import firebase from "firebase/app";
-import "firebase/storage/";
+
+import "firebase/auth";
+import "firebase/storage";
 import "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -18,6 +20,7 @@ firebase.initializeApp(firebaseConfig);
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 
+// adding time stamp when creating / uploading image (useStorage)
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 export { projectStorage, projectFirestore, timestamp };
