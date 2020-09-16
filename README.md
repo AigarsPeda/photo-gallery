@@ -11,7 +11,13 @@ npm install
 ### Run App
 
 ```bash
-npm run dev
+npm run start
+```
+
+### Build for production
+
+```bash
+npm run build
 ```
 
 Runs the app in the development mode.<br />
