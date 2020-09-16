@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import useStorage from "../../hooks/useStorage";
 
+// motions
 import { motion } from "framer-motion";
 
 interface Props {
