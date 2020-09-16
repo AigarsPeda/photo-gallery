@@ -2,7 +2,11 @@
 
 ## Available Scripts
 
-### `npm i`
+### Install server dependencies
+
+```bash
+npm install
+```
 
 ### `npm run start`
 
