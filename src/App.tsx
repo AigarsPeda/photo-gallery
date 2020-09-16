@@ -13,8 +13,8 @@ import NavBar from "./components/navBar/NavBar";
 
 // pages
 import UploadPage from "./pages/UploadPage";
-import SignUp from "./pages/SignUp";
-import SignIn from "./pages/SignIn";
+import SignUpPage from "./pages/SignUpPage";
+import SignInPage from "./pages/SignInPage";
 
 const App: React.FC = () => {
   return (
@@ -24,8 +24,8 @@ const App: React.FC = () => {
           <NavBar />
           <Switch>
             <PrivateRoute exact path="/" component={UploadPage} />
-            <Route exact path="/sign-in" component={SignIn} />
-            <Route exact path="/sign-up" component={SignUp} />
+            <Route exact path="/sign-in" component={SignInPage} />
+            <Route exact path="/sign-up" component={SignUpPage} />
           </Switch>
         </div>
       </AuthProvider>
