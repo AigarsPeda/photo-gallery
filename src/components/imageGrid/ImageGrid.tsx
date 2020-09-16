@@ -1,6 +1,7 @@
 import React from "react";
 import useFirestore from "../../hooks/useFirestore";
 
+// motion
 import { motion } from "framer-motion";
 
 // type
@@ -23,7 +24,7 @@ const ImageGrid: React.FC<Props> = (props) => {
               className="img-wrap"
               key={doc.id}
               onClick={() => setSelectedImg(doc.url)}
-              whileHover={{ opacity: 1 }}
+              whileHover={{ opacity: 1, scale: 1.05 }}
               layout
             >
               <motion.img
