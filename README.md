@@ -2,7 +2,7 @@
 
 ## Available Scripts
 
-### Install server dependencies
+### Install dependencies
 
 ```bash
 npm install
