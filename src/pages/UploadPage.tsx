@@ -9,7 +9,7 @@ const UploadPage: React.FC = () => {
   const [selectedImg, setSelectedImg] = useState<string>();
 
   return (
-    <div className="App">
+    <div>
       <Title />
       <UploadForm />
       <ImageGrid setSelectedImg={setSelectedImg} />
