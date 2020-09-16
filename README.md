@@ -1,7 +1,5 @@
 # PHOTO-GALLERY
 
-## Download dependencies For both (front-end & back-end) run
-
 ## Available Scripts
 
 ### `npm i`
