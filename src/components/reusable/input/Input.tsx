@@ -2,6 +2,8 @@ import React from "react";
 
 interface Props {
   label?: string;
+  labelClassName?: string;
+  inputClassName?: string;
   name: string;
   type: string;
   placeholder: string;
@@ -13,6 +15,8 @@ interface Props {
 const Input: React.FC<Props> = (props) => {
   const {
     label,
+    labelClassName,
+    inputClassName,
     name,
     type,
     placeholder,
@@ -22,8 +26,9 @@ const Input: React.FC<Props> = (props) => {
   } = props;
   return (
     <>
-      <label>{label}</label>
+      {label && <label className={labelClassName}>{label}</label>}
       <input
+        className={inputClassName}
         name={name}
         type={type}
         placeholder={placeholder}
