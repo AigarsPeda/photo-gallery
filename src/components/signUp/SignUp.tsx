@@ -62,25 +62,26 @@ const SignUp: React.FC<Props> = (props) => {
       <h1>Sign Up</h1>
       <form onSubmit={handleSignUp}>
         <Input
-          label="Email"
+          label="EMAIL"
           name="email"
           type="email"
-          placeholder="Email"
           autoComplete="On"
           value={loginData.email}
           handleChange={handleChange}
         />
         <Input
-          label="Password"
+          label="PASSWORD"
           name="password"
           type="password"
-          placeholder="Password"
           value={loginData.password}
           handleChange={handleChange}
         />
         {error && <div>{error}</div>}
         <button type="submit">Log in</button>
-        <Link to="/sign-in">Do You have account?</Link>
+        <section>
+          <span>Do You have account?</span>
+          <Link to="/sign-in">Sign In</Link>
+        </section>
       </form>
     </div>
   );
