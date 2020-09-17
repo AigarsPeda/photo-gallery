@@ -6,7 +6,7 @@ interface Props {
   inputClassName?: string;
   name: string;
   type: string;
-  placeholder: string;
+  placeholder?: string;
   autoComplete?: string;
   value: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
