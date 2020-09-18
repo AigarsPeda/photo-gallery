@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// component
 import ProgressBar from "../progressBar/ProgressBar";
 
 const UploadForm: React.FC = () => {
