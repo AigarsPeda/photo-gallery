@@ -12,7 +12,7 @@ const Dotenv = require("dotenv-webpack");
 const port = process.env.PORT || 8080;
 
 module.exports = (env) => {
-  const isProduction = env.production === "production";
+  const isProduction = env.production === true;
 
   if (env.production) {
     console.log("\033[31mPRODUCTION MODE");
